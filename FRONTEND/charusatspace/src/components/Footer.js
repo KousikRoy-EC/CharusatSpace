@@ -11,11 +11,11 @@ function footer() {
         <div>
             <footer className="page-footer">
 
-                <div className="col-4">
+                <div className="column">
                     <p className="Copyright"> © {Year} Copyright </p>
                 </div>
 
-                <div className="col-4">
+                <div className="column">
                     <a href="mailto:Charusatspace@gmail.com">
                         <MdEmail
                             size="1.5em"
@@ -25,7 +25,7 @@ function footer() {
                     </a><span>Charusatspace@gmail.com</span>
                 </div>
 
-                <div className="col-4" >
+                <div className="column" >
                     <a href="https://www.google.com/maps/place/Charotar+University+of+Science+and+Technology+(CHARUSAT)/@23.2674852,74.0929663,8z/data=!4m5!3m4!1s0x395e50c43cdea6c7:0x5074fe9e0c1c8bd!8m2!3d22.6000707!4d72.8192651" target="_blank">
                         <FaMapMarkerAlt
                             size="1.5em"
@@ -42,3 +42,5 @@ function footer() {
 }
 
 export default footer;
+
+
