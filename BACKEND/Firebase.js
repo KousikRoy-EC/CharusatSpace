@@ -7,7 +7,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDWQhP1n7VarSaxtb6xpo8WNH6fmkleieI",
+    apiKey: apiKey,
     authDomain: "charusatspace.firebaseapp.com",
     databaseURL: "https://charusatspace-default-rtdb.firebaseio.com",
     projectId: "charusatspace",
