@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background: #f3f2ef;
   margin: 0;
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fff;
@@ -316,6 +316,16 @@ main .helper span {
 @media screen and (min-width: 200px) and (max-width: 900px) {
   .page-footer {
     position: relative !important;
+  }
+
+  .note {
+    width: -webkit-fill-available !important;
+    margin: 0px 2rem 40px 2rem !important;
+  }
+
+  form.create-note {
+    width: auto !important;
+    margin: 200px 2rem 40px 2rem !important;
   }
 
   .HomeHeader {
@@ -735,4 +745,111 @@ a.ssolink {
 
 .Table-outer {
   margin: 10rem 5rem 10rem 10rem;
+}
+
+.input {
+  margin-top: 10rem;
+  margin-left: 5rem;
+  color: #191a19;
+}
+
+/* extra */
+.imp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #191a19;
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 480px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100px;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+
+  color: #4eaefd;
+  border: none;
+
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+.Bottomsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 100px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #4eaefd;
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  width: 90px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.Loading {
+  margin-bottom: 5rem;
+  color: black;
+}
+
+.comments {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
 }
