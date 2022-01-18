@@ -39,7 +39,7 @@ function SideNavbar() {
                     </Link>
 
 
-                    <li tabindex="0" onClick={Toggling} class="icon-settings Opt">
+                    <li onClick={Toggling} class="icon-settings Opt">
                         <BiBook size={30} className="Sourceicons" />
                         <span  >LearnSpace</span>
                         <FaAngleDown size={25} style={{ paddingLeft: "1rem", marginRight: "0rem" }} className="Sourceicons" />

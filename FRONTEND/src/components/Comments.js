@@ -7,9 +7,10 @@ function comments(props) {
         className="comments"
         required
         placeholder="Comment Something . . . "
-        rows={1}
+        rows={2}
     />
         <button type="submit" >
+            Post
             <FaArrowAltCircleRight style={{ marginLeft: "5px" }} />
         </button>
     </div>)
