@@ -853,3 +853,8 @@ form.create-note button {
   font-family: inherit;
   resize: none;
 }
+
+.icon {
+  margin-left: 3px;
+  margin-right: 3px;
+}
