@@ -80,11 +80,13 @@ function CreateArea(props) {
                         id={index}
                         Name={noteItem.Name}
                         Post={noteItem.Post}
+
                         onDelete={props.onDelete}
                         handleComment={props.commentmod}
                     />
                 );
             }).reverse()}
+
 
             <div class="d-flex Loading justify-content-center">
                 <div class="spinner-border" role="status">

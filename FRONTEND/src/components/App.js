@@ -22,21 +22,25 @@ function App() {
       Name: "Kousik Roy",
       Email: "kaushikroy1001@gmail.com",
       Post: "Hey,there I am kousik studying in charusat university.",
+      comment: ["Hello Kousik Roy"],
     },
     {
       Name: "Kishan Roy",
       Email: "Kishanroy1001@gmail.com",
       Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: ["Hello Kishan Roy"],
     },
     {
       Name: "Aman Roy",
       Email: "Amanroy1001@gmail.com",
       Post: "Hey,there I am Aman studying in charusat university.",
+      comment: ["Hello Aman Roy"],
     },
     {
       Name: "Riya Roy",
       Email: "Riyaroy1001@gmail.com",
       Post: "Hey,there I am Riya studying in charusat university.",
+      comment: ["Hello Riya Roy"],
     },
   ]);
 
@@ -54,8 +58,13 @@ function App() {
     });
   }
 
-  function HandlingComments(params) {
+  function HandlingComments(comm, id) {
+    console.log(comm, id)
 
+    setNotes((prevNotes) => {
+      prevNotes[id].comment.push(comm);
+      return [...prevNotes]
+    })
   }
 
   return (
