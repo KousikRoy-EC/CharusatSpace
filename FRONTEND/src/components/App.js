@@ -22,25 +22,33 @@ function App() {
       Name: "Kousik Roy",
       Email: "kaushikroy1001@gmail.com",
       Post: "Hey,there I am kousik studying in charusat university.",
-      comment: ["Hello Kousik Roy"],
+      comment: ["Hello", "Kousik", "Roy"],
+      L: 18,
+      DL: 10,
     },
     {
       Name: "Kishan Roy",
       Email: "Kishanroy1001@gmail.com",
       Post: "Hey,there I am Kishan studying in charusat university.",
-      comment: ["Hello Kishan Roy"],
+      comment: ["Hello", "Kishan", "Roy", "Hello", "Kishan", "Roy"],
+      L: 87,
+      DL: 67,
     },
     {
       Name: "Aman Roy",
       Email: "Amanroy1001@gmail.com",
       Post: "Hey,there I am Aman studying in charusat university.",
-      comment: ["Hello Aman Roy"],
+      comment: ["Hello Aman Roy", "Hello", "Kishan", "Roy", "Hello", "Kishan", "Roy"],
+      L: 23,
+      DL: 41,
     },
     {
       Name: "Riya Roy",
       Email: "Riyaroy1001@gmail.com",
       Post: "Hey,there I am Riya studying in charusat university.",
-      comment: ["Hello Riya Roy"],
+      comment: ["Hello Riya Roy", "Hello", "Kishan", "Roy", "hello"],
+      L: 45,
+      DL: 63,
     },
   ]);
 
@@ -59,13 +67,40 @@ function App() {
   }
 
   function HandlingComments(comm, id) {
-    console.log(comm, id)
-
     setNotes((prevNotes) => {
       prevNotes[id].comment.push(comm);
       return [...prevNotes]
     })
   }
+
+
+  function setLDL(id, op, value) {
+    if (op === "L+") {
+      setNotes((prevNotes) => {
+        prevNotes[id].L = value;
+        return [...prevNotes];
+      })
+    }
+    else if (op === "L-") {
+      setNotes((prevNotes) => {
+        prevNotes[id].L = value;
+        return [...prevNotes]
+      })
+    }
+    else if (op === "DL+") {
+      setNotes((prevNotes) => {
+        prevNotes[id].DL = value;
+        return [...prevNotes]
+      })
+    }
+    else if (op === "DL-") {
+      setNotes((prevNotes) => {
+        prevNotes[id].DL = value;
+        return [...prevNotes]
+      })
+    }
+  }
+
 
   return (
     <Router>
@@ -99,7 +134,7 @@ function App() {
           </Route>
 
           <Route exact path="/Discussion">
-            <Discusion onAdd={addNote} Pnotes={notes} onDelete={deleteNote} commentmod={HandlingComments} />
+            <Discusion onLDL={setLDL} onAdd={addNote} Pnotes={notes} onDelete={deleteNote} commentmod={HandlingComments} />
           </Route>
         </Switch>
         <Footer />

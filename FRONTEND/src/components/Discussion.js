@@ -9,6 +9,9 @@ function CreateArea(props) {
         Name: "",
         Email: "",
         Post: "",
+        comment: [],
+        L: 0,
+        DL: 0,
     });
 
     function handleChange(event) {
@@ -31,6 +34,9 @@ function CreateArea(props) {
             Name: "",
             Email: "",
             Post: "",
+            comment: [],
+            L: 0,
+            DL: 0,
         });
         event.preventDefault();
     }
@@ -65,7 +71,7 @@ function CreateArea(props) {
                 />
 
                 <button type="submit" onClick={submitNote}>
-                    Post
+                    <span>Post</span>
                     <FaArrowAltCircleRight style={{ marginLeft: "5px" }} />
                 </button>
             </form>
@@ -80,7 +86,10 @@ function CreateArea(props) {
                         id={index}
                         Name={noteItem.Name}
                         Post={noteItem.Post}
-
+                        Likes={noteItem.L}
+                        DisLikes={noteItem.DL}
+                        comment={noteItem.comment}
+                        setLikesDisLikes={props.onLDL}
                         onDelete={props.onDelete}
                         handleComment={props.commentmod}
                     />
