@@ -45,6 +45,7 @@ function CreateArea(props) {
         <div>
             <form className="create-note">
                 <input
+                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
                     name="Name"
                     onChange={handleChange}
                     required
@@ -53,6 +54,7 @@ function CreateArea(props) {
                 />
 
                 <input
+                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
                     name="Email"
                     required
                     type="Email"
@@ -62,6 +64,7 @@ function CreateArea(props) {
                 />
 
                 <textarea
+                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "15px", margin: "5px 0px" }}
                     name="Post"
                     required
                     onChange={handleChange}

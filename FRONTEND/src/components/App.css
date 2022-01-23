@@ -879,8 +879,12 @@ form.create-note button {
   font-size: 12px;
 }
 .post .post-heading {
-  height: 95px;
-  padding: 20px 15px;
+  height: 75px;
+  padding: 8px 15px;
+  text-align: justify;
+  display: inline-flex;
+}
+.Mpost {
   text-align: justify;
   display: inline-flex;
 }
@@ -900,15 +904,15 @@ form.create-note button {
   color: #aaaaaa;
 }
 .post .post-heading .meta .time {
-  margin-top: 8px;
   color: #999;
+  margin: 5px 0px;
 }
 .post .post-image .image {
   width: 100%;
   height: auto;
 }
 .post .post-description {
-  padding: 15px;
+  padding: 8px 15px;
   text-align: justify;
 }
 .post .post-description p {
@@ -992,4 +996,14 @@ form.create-note button {
   border-radius: 3px 3px 10px 25px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.Cbtn {
+  justify-content: flex-end !important;
+  margin-right: 0px !important;
 }

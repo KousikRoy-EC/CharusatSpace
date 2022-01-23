@@ -9,12 +9,14 @@ function commentBox(props) {
                 <div class="col-12">
                     <div class="card card-white post cpost">
                         <div class="post-heading">
-                            <div class="float-left image">
-                                <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar Cavatar" alt="user profile image" />
+                            <div class="image">
+                                <img src="http://bootdey.com/img/Content/user_1.jpg" style={{ height: "48px", width: "48px", margin: "5px 10px 5px 0px" }} class=" Cavatar" alt="user profile image" />
                             </div>
-                            <div class="float-left meta">
+                            <div class="meta" style={{
+                                marginTop: "10px"
+                            }}>
                                 <div class="title h5">
-                                    <a href="#"><b>Ryan Haywood</b></a>
+                                    <b>Ryan Haywood</b>
 
                                 </div>
                                 <h6 class="text-muted time">1 minute ago</h6>
