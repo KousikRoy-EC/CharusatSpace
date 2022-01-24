@@ -3,10 +3,10 @@ import { FaFacebookSquare, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Members(props) {
     return (
-        <div class="card">
-            <div class="card__content">
-                <h3 class="card__header">{props.NAME} </h3>
-                <p class="card__info">{props.ROLE}</p>
+        <div className="card">
+            <div className="card__content">
+                <h3 className="card__header">{props.NAME} </h3>
+                <p className="card__info">{props.ROLE}</p>
                 <a href={props.F} target="_blank">
                     <FaFacebookSquare
                         size="2em"

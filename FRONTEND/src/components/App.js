@@ -22,35 +22,40 @@ function App() {
       Name: "Kousik Roy",
       Email: "kaushikroy1001@gmail.com",
       Post: "Hey,there I am kousik studying in charusat university.",
-      comment: ["Hello", "Kousik", "Roy"],
+      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
       L: 18,
       DL: 10,
+      time: 1643011821849,
     },
     {
       Name: "Kishan Roy",
       Email: "Kishanroy1001@gmail.com",
       Post: "Hey,there I am Kishan studying in charusat university.",
-      comment: ["Hello", "Kishan", "Roy", "Hello", "Kishan", "Roy"],
+      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
       L: 87,
       DL: 67,
+      time: 1643011821849,
     },
     {
       Name: "Aman Roy",
       Email: "Amanroy1001@gmail.com",
       Post: "Hey,there I am Aman studying in charusat university.",
-      comment: ["Hello Aman Roy", "Hello", "Kishan", "Roy", "Hello", "Kishan", "Roy"],
+      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
       L: 23,
       DL: 41,
+      time: 1643011821849,
     },
     {
       Name: "Riya Roy",
       Email: "Riyaroy1001@gmail.com",
       Post: "Hey,there I am Riya studying in charusat university.",
-      comment: ["Hello Riya Roy", "Hello", "Kishan", "Roy", "hello"],
+      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
       L: 45,
       DL: 63,
+      time: 1643011821849,
     },
   ]);
+
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -66,11 +71,12 @@ function App() {
     });
   }
 
-  function HandlingComments(comm, id) {
+  function HandlingComments(comm, id, value) {
     setNotes((prevNotes) => {
-      prevNotes[id].comment.push(comm);
+      prevNotes[id].comment.push({ content: comm, tm: value });
       return [...prevNotes]
-    })
+    });
+
   }
 
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Commentte from "./Comments";
 import dot from "../Photos/dots.png";
 function Note(props) {
+    var tm_sec = new Date().getTime();
     const [showcomments, setshowcomments] = useState(false);
     const [liked, setliked] = useState({
         Like: true,
@@ -13,9 +14,32 @@ function Note(props) {
         props.onDelete(props.id);
     }
 
-    // function handleComment() {
-    //     props.handleComment(props.id);
-    // }
+    function secondsToDhms(seconds) {
+
+        seconds = Number(seconds);
+        var d = Math.floor(seconds / (3600 * 24));
+        var h = Math.floor(seconds % (3600 * 24) / 3600);
+        var m = Math.floor(seconds % 3600 / 60);
+        var s = Math.floor(seconds % 60);
+
+        var dDisplay = d > 0 ? d + " day" : " ";
+        var hDisplay = h > 0 ? h + " hr" : " ";
+        var mDisplay = m > 0 ? m + " min" : " ";
+        var sDisplay = s > 0 ? s + " sec" : " ";
+
+        if (d > 0) {
+            return dDisplay + " ago";
+        }
+        else if (h > 0) {
+            return hDisplay + " ago";
+        }
+        else if (m > 0) {
+            return mDisplay + " ago";
+        }
+        else {
+            return sDisplay + " ago";
+        }
+    }
 
     function handleperformance(event) {
         var mood = event.target.name;
@@ -78,21 +102,31 @@ function Note(props) {
                         <span style={{ display: "block" }}>
                             {" "}
                             <h6 style={{ marginBottom: "5px" }}>{props.Name}</h6>
-                            <h6 style={{ marginTop: "0px" }}>1 minute ago</h6>
+                            <h6 style={{ marginTop: "0px" }}>{secondsToDhms((tm_sec - props.tm) / 1000)}</h6>
                         </span>
                     </div>
-                    <div class="dropdown">
-                        <button class="btn Cbtn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div className="dropdown">
+                        <button className="btn Cbtn " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <img style={{ height: "18px", width: "18px" }} src={dot}></img>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><span style={{ cursor: "pointer" }} class="dropdown-item" onClick={handledel}>Delete</span></li>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><span style={{ cursor: "pointer" }} className="dropdown-item" onClick={handledel}>Delete</span></li>
                         </ul>
                     </div>
 
                 </div>
                 <div style={{ margin: "5px 10px" }}>
                     <p>{props.Post}</p>
+                </div>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}>
+                    <img src="https://picsum.photos/450/200" style={{
+                        margin: "0px 5px",
+                        borderRadius: "10px"
+                    }}></img>
                 </div>
                 <hr
                     style={{
@@ -101,15 +135,15 @@ function Note(props) {
                     }}
                 />
                 <div className="Bottomsec">
-                    <button onClick={handleperformance} name="Likes">
+                    <button className="D-btn " style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="Likes">
                         <MdThumbUp size={20} style={{ marginRight: "10px" }} />{" "}
                         {props.Likes}
                     </button>
-                    <button onClick={handleperformance} name="DisLikes">
+                    <button className="D-btn " style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="DisLikes">
                         <MdThumbDown size={20} style={{ marginRight: "10px" }} />{" "}
                         {props.DisLikes}
                     </button>
-                    <button onClick={handleperformance} name="Comment">
+                    <button className="D-btn" style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="Comment">
                         {" "}
                         <MdOutlineModeComment
                             size={20}
@@ -124,6 +158,7 @@ function Note(props) {
                     handlec={props.handleComment}
                     Id={props.id}
                     list={props.comment}
+                    Sectoday={secondsToDhms}
                 />
             </div>
         </div>

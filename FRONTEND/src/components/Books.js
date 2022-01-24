@@ -6,7 +6,7 @@ function Books(props) {
         <tr height="200px" >
             <td ><img className="Bookimg" src={props.img} /></td>
             <td >{props.title}</td>
-            <td><button type="button" class="Lbtn btn btn-success">Go to Link <FaLongArrowAltUp /> </button></td>
+            <td><button type="button" className="Lbtn btn btn-success">Go to Link <FaLongArrowAltUp /> </button></td>
         </tr>)
 }
 

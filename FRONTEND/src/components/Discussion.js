@@ -12,6 +12,7 @@ function CreateArea(props) {
         comment: [],
         L: 0,
         DL: 0,
+        time: 0,
     });
 
     function handleChange(event) {
@@ -19,8 +20,10 @@ function CreateArea(props) {
 
         setNote((prevNote) => {
             return {
+
                 ...prevNote,
                 [name]: value,
+                time: new Date().getTime(),
             };
         });
     }
@@ -37,26 +40,28 @@ function CreateArea(props) {
             comment: [],
             L: 0,
             DL: 0,
+            time: 0,
         });
         event.preventDefault();
     }
 
     return (
         <div>
-            <form className="create-note">
+            <form className="create-note" onSubmit={submitNote}>
                 <input
+                    required
                     style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
                     name="Name"
                     onChange={handleChange}
-                    required
                     value={note.Name}
                     placeholder="Name"
                 />
 
                 <input
+                    required
                     style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
                     name="Email"
-                    required
+
                     type="Email"
                     onChange={handleChange}
                     value={note.Email}
@@ -64,16 +69,17 @@ function CreateArea(props) {
                 />
 
                 <textarea
+                    required
                     style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "15px", margin: "5px 0px" }}
                     name="Post"
-                    required
+                    type="text"
                     onChange={handleChange}
                     value={note.Post}
                     placeholder="Write/Post Something . . . "
                     rows={3}
                 />
 
-                <button type="submit" onClick={submitNote}>
+                <button type="submit" className="D-btn">
                     <span>Post</span>
                     <FaArrowAltCircleRight style={{ marginLeft: "5px" }} />
                 </button>
@@ -92,6 +98,7 @@ function CreateArea(props) {
                         Likes={noteItem.L}
                         DisLikes={noteItem.DL}
                         comment={noteItem.comment}
+                        tm={noteItem.time}
                         setLikesDisLikes={props.onLDL}
                         onDelete={props.onDelete}
                         handleComment={props.commentmod}
@@ -100,9 +107,9 @@ function CreateArea(props) {
             }).reverse()}
 
 
-            <div class="d-flex Loading justify-content-center">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            <div className="d-flex Loading justify-content-center">
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
 

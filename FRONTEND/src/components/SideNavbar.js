@@ -17,21 +17,21 @@ function SideNavbar() {
     }
     return (
         <div>
-            <nav class="menu" tabindex="0">
-                <div class="smartphone-menu-trigger"></div>
-                <header class="avatar">
+            <nav className="menu" tabindex="0">
+                <div className="smartphone-menu-trigger"></div>
+                <header className="avatar">
                     <FaUserGraduate size={30} /> <h2 className="Logo">CharusatSpace</h2>
                 </header>
                 <ul>
                     <Link className="Links" to="/">
-                        <li tabindex="0" class="icon-dashboard Opt">
+                        <li tabindex="0" className="icon-dashboard Opt">
                             {" "}
                             <MdOutlineHome size={30} className="Sourceicons" />
                             <span>Home</span>
                         </li>
                     </Link>
                     <Link className="Links" to="/Team">
-                        <li tabindex="0" class="icon-customers Opt">
+                        <li tabindex="0" className="icon-customers Opt">
                             {" "}
                             <AiOutlineTeam size={30} className="Sourceicons" />
                             <span>Meet our team</span>
@@ -39,7 +39,7 @@ function SideNavbar() {
                     </Link>
 
 
-                    <li onClick={Toggling} class="icon-settings Opt">
+                    <li onClick={Toggling} className="icon-settings Opt">
                         <BiBook size={30} className="Sourceicons" />
                         <span  >LearnSpace</span>
                         <FaAngleDown size={25} style={{ paddingLeft: "1rem", marginRight: "0rem" }} className="Sourceicons" />
@@ -47,20 +47,20 @@ function SideNavbar() {
                     </li>
 
                     <Link className="Links " to="/CS" >
-                        <li tabindex="0" class="icon-settings Opt" style={{ display: state ? "none" : "" }}>
+                        <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >CS/IT</span>
                         </li>
                     </Link>
                     <Link className="Links " to="/EC" >
-                        <li tabindex="0" class="icon-settings Opt" style={{ display: state ? "none" : "" }}>
+                        <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >ECE</span>
                         </li>
                     </Link>
 
                     <Link className="Links" to="/Attendance">
-                        <li tabindex="0" class="icon-dashboard Opt">
+                        <li tabindex="0" className="icon-dashboard Opt">
                             {" "}
                             <IoHandRightOutline size={30} className="Sourceicons" />
                             <span>Attendance</span>
@@ -78,7 +78,7 @@ function SideNavbar() {
 
 
                     <Link className="Links" to="/Discussion">
-                        <li tabindex="0" class="icon-dashboard Opt">
+                        <li tabindex="0" className="icon-dashboard Opt">
                             {" "}
                             <VscAccount size={30} className="Sourceicons" />
                             <span>Discussion</span>

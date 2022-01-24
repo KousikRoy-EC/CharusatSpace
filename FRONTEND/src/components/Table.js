@@ -7,7 +7,7 @@ import Photo3 from "../Photos/Physics.jpg"
 function Table(props) {
     console.log(props.category)
     return (<div className="Table-outer">
-        <table class="table table-bordered">
+        <table className="table table-bordered">
             <thead>
                 <tr>
 
