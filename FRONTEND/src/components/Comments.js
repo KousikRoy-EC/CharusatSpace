@@ -58,7 +58,7 @@ function comments(props) {
                 <button onClick={loadComments} style={{
                     color: "white", width: "150px", fontWeight: "500",
                     fontSize: "16px"
-                }} type="button" class="btn btn-info">Load Comments</button>
+                }} type="button" className="btn btn-info">Load Comments</button>
             </div>
         </div>
     );

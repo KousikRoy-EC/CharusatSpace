@@ -23,21 +23,21 @@ function SideNavbar(props) {
     }
     return (
         <div>
-            <nav className="menu" tabindex="0">
+            <nav className="menu" tabIndex="0">
                 <div className="smartphone-menu-trigger"></div>
                 <header className="avatar">
                     <FaUserGraduate size={30} /> <h2 className="Logo">CharusatSpace</h2>
                 </header>
                 <ul>
                     <Link onClick={Show} className="Links" to="/">
-                        <li tabindex="0" className="icon-dashboard Opt">
+                        <li tabIndex="0" className="icon-dashboard Opt">
                             {" "}
                             <MdOutlineHome size={30} className="Sourceicons" />
                             <span>Home</span>
                         </li>
                     </Link>
                     <Link onClick={Show} className="Links" to="/Team">
-                        <li tabindex="0" className="icon-customers Opt">
+                        <li tabIndex="0" className="icon-customers Opt">
                             {" "}
                             <AiOutlineTeam size={30} className="Sourceicons" />
                             <span>Meet our team</span>
@@ -53,20 +53,20 @@ function SideNavbar(props) {
                     </li>
 
                     <Link onClick={Show} className="Links " to="/CS" >
-                        <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
+                        <li tabIndex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >CS/IT</span>
                         </li>
                     </Link>
                     <Link onClick={Show} className="Links " to="/EC" >
-                        <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
+                        <li tabIndex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >ECE</span>
                         </li>
                     </Link>
 
                     <Link onClick={Show} className="Links" to="/Attendance">
-                        <li tabindex="0" className="icon-dashboard Opt">
+                        <li tabIndex="0" className="icon-dashboard Opt">
                             {" "}
                             <IoHandRightOutline size={30} className="Sourceicons" />
                             <span>Attendance</span>
@@ -76,7 +76,7 @@ function SideNavbar(props) {
 
 
                     <Link onClick={Show} className="Links" to="/Contribute">
-                        <li tabindex="0" className="icon-dashboard Opt">
+                        <li tabIndex="0" className="icon-dashboard Opt">
                             <FaPaperclip size={30} className="Sourceicons" color='white' />
                             <span>Contribute</span>
                         </li>
@@ -84,7 +84,7 @@ function SideNavbar(props) {
 
 
                     <Link className="Links" to="/Discussion">
-                        <li tabindex="0" className="icon-dashboard Opt">
+                        <li tabIndex="0" className="icon-dashboard Opt">
                             {" "}
                             <VscAccount size={30} className="Sourceicons" />
                             <span>Discussion</span>

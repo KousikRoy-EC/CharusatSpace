@@ -64,12 +64,13 @@ function CreateArea(props) {
             })
 
         }
+    }
 
 
-    };
 
     function loadFile(event) {
         console.log(event.target.files[0]);
+
     };
 
     return (
@@ -105,17 +106,17 @@ function CreateArea(props) {
                     placeholder="Write/Post Something . . . "
                     rows={3}
                 />
+                <label className="custom-file-upload">
+                    <input type="file" accept="image/*" id="myFile" name="filename" onChange={loadFile} />
 
-                <input type="file" accept="image/*" id="myFile" name="filename" onChange={loadFile} />
-
-
-
-
+                </label>
                 <button type="submit" className="D-btn">
                     <span>Post</span>
                     <FaArrowAltCircleRight style={{ marginLeft: "5px" }} />
                 </button>
             </form>
+
+
 
 
             {props.Pnotes.map((noteItem, index) => {
