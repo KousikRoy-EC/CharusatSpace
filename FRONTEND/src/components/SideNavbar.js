@@ -9,11 +9,17 @@ import { IoHandRightOutline } from "react-icons/io5";
 import { useState } from "react";
 
 
-function SideNavbar() {
+function SideNavbar(props) {
 
     const [state, setstate] = useState(true)
     function Toggling() {
         setstate(!state)
+    }
+
+
+
+    function Show() {
+        props.setfoot("yes");
     }
     return (
         <div>
@@ -23,14 +29,14 @@ function SideNavbar() {
                     <FaUserGraduate size={30} /> <h2 className="Logo">CharusatSpace</h2>
                 </header>
                 <ul>
-                    <Link className="Links" to="/">
+                    <Link onClick={Show} className="Links" to="/">
                         <li tabindex="0" className="icon-dashboard Opt">
                             {" "}
                             <MdOutlineHome size={30} className="Sourceicons" />
                             <span>Home</span>
                         </li>
                     </Link>
-                    <Link className="Links" to="/Team">
+                    <Link onClick={Show} className="Links" to="/Team">
                         <li tabindex="0" className="icon-customers Opt">
                             {" "}
                             <AiOutlineTeam size={30} className="Sourceicons" />
@@ -46,20 +52,20 @@ function SideNavbar() {
 
                     </li>
 
-                    <Link className="Links " to="/CS" >
+                    <Link onClick={Show} className="Links " to="/CS" >
                         <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >CS/IT</span>
                         </li>
                     </Link>
-                    <Link className="Links " to="/EC" >
+                    <Link onClick={Show} className="Links " to="/EC" >
                         <li tabindex="0" className="icon-settings Opt" style={{ display: state ? "none" : "" }}>
                             <BiBook size={30} className="Sourceicons" />
                             <span >ECE</span>
                         </li>
                     </Link>
 
-                    <Link className="Links" to="/Attendance">
+                    <Link onClick={Show} className="Links" to="/Attendance">
                         <li tabindex="0" className="icon-dashboard Opt">
                             {" "}
                             <IoHandRightOutline size={30} className="Sourceicons" />
@@ -69,7 +75,7 @@ function SideNavbar() {
 
 
 
-                    <Link className="Links" to="/Contribute">
+                    <Link onClick={Show} className="Links" to="/Contribute">
                         <li tabindex="0" className="icon-dashboard Opt">
                             <FaPaperclip size={30} className="Sourceicons" color='white' />
                             <span>Contribute</span>

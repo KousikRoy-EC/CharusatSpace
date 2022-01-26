@@ -84,6 +84,8 @@ function Note(props) {
             setshowcomments(true);
         }
     }
+
+
     return (
         <div className="imp">
             <div className="note">
@@ -123,7 +125,7 @@ function Note(props) {
                     justifyContent: "center",
                     alignItems: "center",
                 }}>
-                    <img src="https://picsum.photos/450/200" style={{
+                    <img className="mview" src="https://picsum.photos/450/200" style={{
                         margin: "0px 5px",
                         borderRadius: "10px"
                     }}></img>

@@ -1,14 +1,13 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaFacebookSquare, FaMapMarkerAlt } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
 
 const Year = new Date().getFullYear();
-function footer() {
+function footer(props) {
+    var show = props.display;
     return (
-        <div>
+        <div style={{ display: show }}>
             <footer className="page-footer">
 
                 <div className="column">

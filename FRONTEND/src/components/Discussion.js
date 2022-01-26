@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import Post from "./Post"
 
 
 function CreateArea(props) {
+
+    useEffect(() => {
+        props.setfoot("no");
+    });
 
     const [note, setNote] = useState({
         Name: "",
@@ -31,6 +35,7 @@ function CreateArea(props) {
 
 
     function submitNote(event) {
+        console.log(e.target.filename)
         props.onAdd(note);
 
         setNote({
@@ -45,8 +50,30 @@ function CreateArea(props) {
         event.preventDefault();
     }
 
+    const [scrol, setsscrol] = useState(4);
+    const [update, setupdate] = useState(0);
+    function onScrolled(e) {
+        var currentScrollY = e.target.scrollTop;
+
+        if (currentScrollY - update > 100) {
+            setupdate((val) => {
+                return val + 1000;
+            });
+            setsscrol((prev) => {
+                return prev + 2;
+            })
+
+        }
+
+
+    };
+
+    function loadFile(event) {
+        console.log(event.target.files[0]);
+    };
+
     return (
-        <div>
+        <div onScroll={onScrolled} style={{ height: "100vh", overflowY: "scroll" }}>
             <form className="create-note" onSubmit={submitNote}>
                 <input
                     required
@@ -79,6 +106,11 @@ function CreateArea(props) {
                     rows={3}
                 />
 
+                <input type="file" accept="image/*" id="myFile" name="filename" onChange={loadFile} />
+
+
+
+
                 <button type="submit" className="D-btn">
                     <span>Post</span>
                     <FaArrowAltCircleRight style={{ marginLeft: "5px" }} />
@@ -104,7 +136,7 @@ function CreateArea(props) {
                         handleComment={props.commentmod}
                     />
                 );
-            }).reverse()}
+            }).reverse().slice(0, scrol)}
 
 
             <div className="d-flex Loading justify-content-center">
@@ -112,9 +144,21 @@ function CreateArea(props) {
                     <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
+            <div style={{ color: "black", paddingBottom: "50px" }} className="d-flex  justify-content-center">
+
+                <span >Nothing to Show...</span>
+            </div>
+
 
         </div>
     );
 }
 
 export default CreateArea;
+
+
+
+
+
+
+

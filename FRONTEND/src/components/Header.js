@@ -4,7 +4,7 @@ import react from "react"
 function Header() {
     return (<div>
 
-        <div className="Header">
+        <div className="Header" style={{ zIndex: "1" }}>
             <p className="Heading">Welcome to CharusatSpace</p>
         </div>
 

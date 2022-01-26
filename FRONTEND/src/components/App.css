@@ -317,7 +317,9 @@ main .helper span {
   .page-footer {
     position: relative !important;
   }
-
+  .mview {
+    width: 320px !important;
+  }
   .note {
     width: -webkit-fill-available !important;
     margin: 0px 2rem 40px 2rem !important;
@@ -840,7 +842,7 @@ form.create-note button {
 }
 
 .Loading {
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
   color: black;
 }
 
@@ -1010,4 +1012,5 @@ form.create-note button {
 .Cbtn {
   justify-content: flex-end !important;
   margin-right: 0px !important;
+  width: 20px !important;
 }

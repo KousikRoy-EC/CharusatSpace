@@ -17,12 +17,31 @@ import Discusion from "./Discussion";
 import { useState } from "react";
 
 function App() {
+  const [dis, setdis] = useState(true);
   const [notes, setNotes] = useState([
     {
       Name: "Kousik Roy",
       Email: "kaushikroy1001@gmail.com",
       Post: "Hey,there I am kousik studying in charusat university.",
-      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
       L: 18,
       DL: 10,
       time: 1643011821849,
@@ -31,7 +50,16 @@ function App() {
       Name: "Kishan Roy",
       Email: "Kishanroy1001@gmail.com",
       Post: "Hey,there I am Kishan studying in charusat university.",
-      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
       L: 87,
       DL: 67,
       time: 1643011821849,
@@ -40,7 +68,16 @@ function App() {
       Name: "Aman Roy",
       Email: "Amanroy1001@gmail.com",
       Post: "Hey,there I am Aman studying in charusat university.",
-      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
       L: 23,
       DL: 41,
       time: 1643011821849,
@@ -49,13 +86,507 @@ function App() {
       Name: "Riya Roy",
       Email: "Riyaroy1001@gmail.com",
       Post: "Hey,there I am Riya studying in charusat university.",
-      comment: [{ content: "Hello Riya Roy", tm: 1643011821849 }],
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 45,
+      DL: 63,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kousik Roy",
+      Email: "kaushikroy1001@gmail.com",
+      Post: "Hey,there I am kousik studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 18,
+      DL: 10,
+      time: 1643011821849,
+    },
+    {
+      Name: "Kishan Roy",
+      Email: "Kishanroy1001@gmail.com",
+      Post: "Hey,there I am Kishan studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 87,
+      DL: 67,
+      time: 1643011821849,
+    },
+    {
+      Name: "Aman Roy",
+      Email: "Amanroy1001@gmail.com",
+      Post: "Hey,there I am Aman studying in charusat university.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
+      L: 23,
+      DL: 41,
+      time: 1643011821849,
+    },
+    {
+      Name: "Riya Roy",
+      Email: "Riyaroy1001@gmail.com",
+      Post: "Hey,there I am Riya studying in charusat university this one only.",
+      comment: [
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+        { content: "Hello Riya Roy", tm: 1643011821849 },
+      ],
       L: 45,
       DL: 63,
       time: 1643011821849,
     },
   ]);
-
 
   function addNote(newNote) {
     setNotes((prevNotes) => {
@@ -64,6 +595,7 @@ function App() {
   }
 
   function deleteNote(id) {
+    console.log(id);
     setNotes((prevNotes) => {
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
@@ -71,49 +603,55 @@ function App() {
     });
   }
 
+  function showFooter(val) {
+    if (val === "no") {
+      setdis((prev) => {
+        return false;
+      });
+    } else if (val === "yes") {
+      setdis((prev) => {
+        return true;
+      });
+    }
+  }
+
   function HandlingComments(comm, id, value) {
     setNotes((prevNotes) => {
       prevNotes[id].comment.push({ content: comm, tm: value });
-      return [...prevNotes]
+      return [...prevNotes];
     });
-
   }
-
 
   function setLDL(id, op, value) {
     if (op === "L+") {
       setNotes((prevNotes) => {
         prevNotes[id].L = value;
         return [...prevNotes];
-      })
-    }
-    else if (op === "L-") {
+      });
+    } else if (op === "L-") {
       setNotes((prevNotes) => {
         prevNotes[id].L = value;
-        return [...prevNotes]
-      })
-    }
-    else if (op === "DL+") {
+        return [...prevNotes];
+      });
+    } else if (op === "DL+") {
       setNotes((prevNotes) => {
         prevNotes[id].DL = value;
-        return [...prevNotes]
-      })
-    }
-    else if (op === "DL-") {
+        return [...prevNotes];
+      });
+    } else if (op === "DL-") {
       setNotes((prevNotes) => {
         prevNotes[id].DL = value;
-        return [...prevNotes]
-      })
+        return [...prevNotes];
+      });
     }
   }
-
 
   return (
     <Router>
       <div>
         <Favicon url={FaviconPhotos} />
         <Header />
-        <SideNav />
+        <SideNav setfoot={showFooter} />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -140,10 +678,17 @@ function App() {
           </Route>
 
           <Route exact path="/Discussion">
-            <Discusion onLDL={setLDL} onAdd={addNote} Pnotes={notes} onDelete={deleteNote} commentmod={HandlingComments} />
+            <Discusion
+              setfoot={showFooter}
+              onLDL={setLDL}
+              onAdd={addNote}
+              Pnotes={notes}
+              onDelete={deleteNote}
+              commentmod={HandlingComments}
+            />
           </Route>
         </Switch>
-        <Footer />
+        <Footer display={dis ? "" : "none"} />
       </div>
     </Router>
   );
