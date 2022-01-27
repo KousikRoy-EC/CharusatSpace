@@ -42,7 +42,7 @@ function Note(props) {
     }
 
     function handleperformance(event) {
-        var mood = event.target.name;
+        var mood = event.currentTarget.name;
         if (mood === "Likes" && liked.Like) {
             props.setLikesDisLikes(props.id, "L+", props.Likes + 1);
 
@@ -138,19 +138,30 @@ function Note(props) {
                 />
                 <div className="Bottomsec">
                     <button className="D-btn spbtn" style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="Likes">
-                        <MdThumbUp size={20} style={{ marginRight: "10px" }} />{" "}
+                        <MdThumbUp
+
+                            size={20}
+                            style={{ marginRight: "10px" }}
+
+                        />
+
                         {props.Likes}
                     </button>
                     <button className="D-btn spbtn" style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="DisLikes">
-                        <MdThumbDown size={20} style={{ marginRight: "10px" }} />{" "}
+                        <MdThumbDown
+
+                            size={20}
+                            style={{ marginRight: "10px" }}
+                        />
                         {props.DisLikes}
                     </button>
                     <button className="D-btn spbtn" style={{ borderRadius: "50px", color: "white", backgroundColor: "#4eaefd" }} onClick={handleperformance} name="Comment">
-                        {" "}
+
                         <MdOutlineModeComment
+
                             size={20}
                             style={{ marginRight: "10px" }}
-                        />{" "}
+                        />
                         {props.comment.length}
                     </button>
                 </div>

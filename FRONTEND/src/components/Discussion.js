@@ -35,7 +35,7 @@ function CreateArea(props) {
 
 
     function submitNote(event) {
-        console.log(e.target.filename)
+
         props.onAdd(note);
 
         setNote({
@@ -69,7 +69,7 @@ function CreateArea(props) {
 
 
     function loadFile(event) {
-        console.log(event.target.files[0]);
+        // console.log(event.target.files[0]);
 
     };
 

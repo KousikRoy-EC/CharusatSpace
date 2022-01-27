@@ -317,6 +317,9 @@ main .helper span {
   .page-footer {
     position: relative !important;
   }
+  .comInput {
+    width: 80% !important;
+  }
 
   .spbtn {
     border-radius: 10px !important;
