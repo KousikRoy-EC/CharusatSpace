@@ -125,7 +125,7 @@ function Note(props) {
                     justifyContent: "center",
                     alignItems: "center",
                 }}>
-                    <img className="mview" src="https://picsum.photos/450/200" style={{
+                    <img className="mview" src={props.link} style={{
                         margin: "0px 5px",
                         borderRadius: "10px"
                     }}></img>

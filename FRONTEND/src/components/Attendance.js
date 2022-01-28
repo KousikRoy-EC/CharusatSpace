@@ -1,7 +1,7 @@
 import react from "react"
 
 function Attendance() {
-    return (<div>
+    return (<div style={{ height: "100vh" }}>
         <div className="formbg-outer">
             <div className="formbg">
                 <div className="formbg-inner padding-horizontal--48">

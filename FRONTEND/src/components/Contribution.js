@@ -1,7 +1,7 @@
 import react from "react"
 
 function Contribution() {
-    return (<div>
+    return (<div style={{ height: "100vh" }}>
         <div className="formbg-outer">
             <div className="formbg">
                 <div className="formbg-inner manual mb-5">

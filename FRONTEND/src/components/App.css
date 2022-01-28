@@ -102,7 +102,7 @@ main .helper span {
     padding-left: 90px;
   }
   .menu {
-    width: 90px;
+    width: 200px;
   }
   .menu .avatar {
     padding: 0.5em;
@@ -133,17 +133,7 @@ main .helper span {
     background-size: 30px auto;
     position: relative;
   }
-  /* .menu ul li span {
-    opacity: 1;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.2em 0.5em;
-    border-radius: 4px;
-    top: 50%;
-    left: 80px;
-    transform: translate3d(-15px, -50%, 0);
-    transition: all 0.15s ease-in-out;
-  } */
+
   .menu ul li span:before {
     content: "";
     width: 0;
@@ -165,7 +155,7 @@ main .helper span {
     margin-right: 8rem !important;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   body {
     padding-left: 0;
   }
@@ -218,6 +208,9 @@ main .helper span {
   }
 }
 
+@media screen and (max-width: 900px) and (min-width: 400px) {
+}
+
 /* Footer Css Module */
 .page-footer {
   background-color: #535255;
@@ -245,20 +238,14 @@ main .helper span {
   .Header {
     text-align: center;
   }
-  .Heading {
-    padding-right: 12.5rem;
-  }
+
   .page-footer {
     position: absolute;
     padding-right: 10rem;
     padding-left: 0rem;
   }
-  .HomeHeader {
-    margin-left: 3rem !important;
-    margin-right: 3rem !important;
-  }
+
   .projects {
-    margin-left: 3rem;
     margin-top: 2rem !important;
     padding-bottom: 5rem;
   }
@@ -266,18 +253,12 @@ main .helper span {
 
 @media screen and (min-width: 1400px) {
   .projects {
-    margin-left: 17rem;
     margin-top: 5rem !important;
-  }
-
-  .HomeHeader {
-    margin-left: 17rem !important;
-    margin-right: 3rem !important;
   }
 }
 @media screen and (max-width: 900px) {
   .Header {
-    padding-left: 2.625rem !important;
+    padding-left: 10rem !important;
   }
 
   .projects {
@@ -307,11 +288,11 @@ main .helper span {
   margin-top: 5px;
 }
 
-/* @media screen and (max-width: 320px) {
-  .Header {
-    width: 120% !important;
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .Logo {
+    display: none;
   }
-} */
+}
 
 @media screen and (min-width: 200px) and (max-width: 900px) {
   .page-footer {
@@ -326,7 +307,7 @@ main .helper span {
     margin: auto 10px !important;
   }
   .mview {
-    width: 320px !important;
+    width: -webkit-fill-available !important;
   }
   .note {
     width: -webkit-fill-available !important;
@@ -339,8 +320,7 @@ main .helper span {
   }
 
   .HomeHeader {
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
+    width: auto !important;
     margin-top: 170px !important;
     text-align: center !important;
     padding: 20px 20px 20px 20px !important;
@@ -360,6 +340,29 @@ main .helper span {
 
   .Lbtn {
     width: 100px;
+  }
+  .set {
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
+    width: 12rem !important;
+
+    margin: 10px 5px 0px 5px !important;
+  }
+
+  .Heading {
+    margin-right: 10rem;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -403,11 +406,10 @@ main .helper span {
 
 /* Home css module */
 .HomeHeader {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  width: 50rem;
   margin-top: 100px;
   text-align: center;
-  padding: 20px 20px 20px 80px;
+  padding: 20px;
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -419,16 +421,14 @@ main .helper span {
   margin-top: 2rem;
   margin-bottom: 4rem;
   flex-direction: row;
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 .project1,
 .project2,
 .project3,
 .project4 {
-  padding: 20px 5px 5px 20px;
+  padding: 20px 10px 5px 10px;
   border: 2px solid black;
-  width: 20%;
+  width: 100%;
   height: 500px;
   border-radius: 20px;
 
@@ -447,8 +447,6 @@ main .helper span {
   .project2,
   .project3,
   .project4 {
-    padding: 30px;
-
     transition: transform 0.2s;
     width: auto;
     height: 600px;
@@ -465,7 +463,11 @@ main .helper span {
   .project2,
   .project3,
   .project4 {
-    height: 500px;
+    height: 550px;
+    width: 15rem;
+  }
+  .Heading {
+    margin-right: 10rem;
   }
 }
 

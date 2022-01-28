@@ -124,6 +124,7 @@ function CreateArea(props) {
                 return (
 
                     <Post
+                        link={noteItem.ImgLink}
                         key={index}
                         id={index}
                         Name={noteItem.Name}
