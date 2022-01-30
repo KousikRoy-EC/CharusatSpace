@@ -1,7 +1,7 @@
 {
   "name": "charusatspace",
   "version": "1.0.0",
-  "description": "the website belongs to charusat students only",
+  "description": "The website belongs to charusat students only",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
