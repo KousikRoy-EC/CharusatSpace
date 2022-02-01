@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import Post from "./Post"
-
-
+import Post from "./Post";
+import { addNote } from "../actions/Action";
+import { connect } from "react-redux";
 function CreateArea(props) {
-
     useEffect(() => {
         props.setfoot("no");
     });
@@ -24,7 +23,6 @@ function CreateArea(props) {
 
         setNote((prevNote) => {
             return {
-
                 ...prevNote,
                 [name]: value,
                 time: new Date().getTime(),
@@ -32,11 +30,8 @@ function CreateArea(props) {
         });
     }
 
-
-
     function submitNote(event) {
-
-        props.onAdd(note);
+        props.dispatch(addNote(note));
 
         setNote({
             Name: "",
@@ -61,24 +56,24 @@ function CreateArea(props) {
             });
             setsscrol((prev) => {
                 return prev + 2;
-            })
-
+            });
         }
     }
 
-
-
     function loadFile(event) {
         // console.log(event.target.files[0]);
-
-    };
+    }
 
     return (
         <div onScroll={onScrolled} style={{ height: "100vh", overflowY: "scroll" }}>
             <form className="create-note" onSubmit={submitNote}>
                 <input
                     required
-                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
+                    style={{
+                        border: "1px solid rgba(0,0,0,.125)",
+                        borderRadius: "5px",
+                        margin: "5px 0px",
+                    }}
                     name="Name"
                     onChange={handleChange}
                     value={note.Name}
@@ -87,9 +82,12 @@ function CreateArea(props) {
 
                 <input
                     required
-                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "5px", margin: "5px 0px" }}
+                    style={{
+                        border: "1px solid rgba(0,0,0,.125)",
+                        borderRadius: "5px",
+                        margin: "5px 0px",
+                    }}
                     name="Email"
-
                     type="Email"
                     onChange={handleChange}
                     value={note.Email}
@@ -98,7 +96,11 @@ function CreateArea(props) {
 
                 <textarea
                     required
-                    style={{ border: "1px solid rgba(0,0,0,.125)", borderRadius: "15px", margin: "5px 0px" }}
+                    style={{
+                        border: "1px solid rgba(0,0,0,.125)",
+                        borderRadius: "15px",
+                        margin: "5px 0px",
+                    }}
                     name="Post"
                     type="text"
                     onChange={handleChange}
@@ -107,8 +109,13 @@ function CreateArea(props) {
                     rows={3}
                 />
                 <label className="custom-file-upload">
-                    <input type="file" accept="image/*" id="myFile" name="filename" onChange={loadFile} />
-
+                    <input
+                        type="file"
+                        accept="image/*"
+                        id="myFile"
+                        name="filename"
+                        onChange={loadFile}
+                    />
                 </label>
                 <button type="submit" className="D-btn">
                     <span>Post</span>
@@ -116,13 +123,8 @@ function CreateArea(props) {
                 </button>
             </form>
 
-
-
-
-            {props.Pnotes.map((noteItem, index) => {
-
+            {props.notes.map((noteItem, index) => {
                 return (
-
                     <Post
                         link={noteItem.ImgLink}
                         key={index}
@@ -133,34 +135,37 @@ function CreateArea(props) {
                         DisLikes={noteItem.DL}
                         comment={noteItem.comment}
                         tm={noteItem.time}
-                        setLikesDisLikes={props.onLDL}
-                        onDelete={props.onDelete}
-                        handleComment={props.commentmod}
+                        dispach={props.dispatch}
+                        SLike={noteItem.Like}
+                        SDisLike={noteItem.DisLike}
                     />
                 );
-            }).reverse().slice(0, scrol)}
-
+            }).slice(0, scrol)}
 
             <div className="d-flex Loading justify-content-center">
                 <div className="spinner-border" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
-            <div style={{ color: "black", paddingBottom: "50px" }} className="d-flex  justify-content-center">
-
-                <span >Nothing to Show...</span>
+            <div
+                style={{ color: "black", paddingBottom: "50px" }}
+                className="d-flex  justify-content-center"
+            >
+                <span>Nothing to Show...</span>
             </div>
-
-
         </div>
     );
 }
 
-export default CreateArea;
 
+function DiscussionWrapper(state) {
+    return {
+        notes: state.PostDetails,
+    }
+}
 
+const connectedComp = connect(DiscussionWrapper)(CreateArea)
 
-
-
+export default connectedComp;
 
 

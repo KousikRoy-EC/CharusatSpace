@@ -3,16 +3,19 @@ import {
     FaArrowAltCircleRight,
     FaUser,
     FaRegEnvelope,
-    FaRegEdit,
+
 } from "react-icons/fa";
 import ComentBox from "./CommentBox";
+import { HandlingComments } from '../actions/Action';
+
 function comments(props) {
     const [e, sete] = useState(4);
     const [OPTshow, setOPTshow] = useState(false);
     const [tcomment, settcomment] = useState({ Name: "", Email: "", content: "", value: 0 });
 
     function submitcomment(event) {
-        props.handlec(tcomment, props.Id);
+
+        props.dis(HandlingComments(tcomment, props.Id));
         settcomment({ Name: "", Email: "", content: "", value: 0 });
         event.preventDefault();
     }
