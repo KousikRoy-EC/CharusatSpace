@@ -1014,7 +1014,7 @@ export function Discussion(state = InitialState, action) {
                 content: comm,
                 tm: value,
             };
-            console.log(objnew);
+
             return {
                 ...state,
                 PostDetails: state.PostDetails.map((content, i) =>
@@ -1042,7 +1042,7 @@ export function Discussion(state = InitialState, action) {
                             }
                             : content
                     );
-                    console.log(newOBJ)
+
                     return {
                         ...state,
                         PostDetails: newOBJ,
@@ -1060,7 +1060,7 @@ export function Discussion(state = InitialState, action) {
                             }
                             : content
                     );
-                    console.log(newOBJ2)
+
                     return {
                         ...state,
                         PostDetails: newOBJ2,
@@ -1079,7 +1079,7 @@ export function Discussion(state = InitialState, action) {
                             }
                             : content
                     );
-                    console.log(newObj1)
+
                     return {
                         ...state,
                         PostDetails: newObj1,
@@ -1097,7 +1097,7 @@ export function Discussion(state = InitialState, action) {
                             }
                             : content
                     );
-                    console.log(newObj2)
+
                     return {
                         ...state,
                         PostDetails: newObj2,

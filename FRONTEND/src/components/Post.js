@@ -39,7 +39,6 @@ function Note(props) {
     function handleperformance(e) {
         var mood = e.currentTarget.name;
         if (mood === "Likes") {
-            console.log(props.likeed);
             if (props.SLike === true && props.SDisLike === true) {
                 props.dispach(setLDL(props.id, "L+", props.Likes + 1, props.DisLikes, false));
             }

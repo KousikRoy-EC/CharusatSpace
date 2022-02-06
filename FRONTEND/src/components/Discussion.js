@@ -15,6 +15,9 @@ function CreateArea(props) {
         comment: [],
         L: 0,
         DL: 0,
+        ImgLink: "#",
+        Like: true,
+        DisLike: true,
         time: 0,
     });
 
